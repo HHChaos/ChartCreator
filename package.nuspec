@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <!--*-->
+    <id>ChartCreator</id>
+    <!--*-->
+    <version>1.0.0</version>
+    <title>ChartCreator</title>
+    <!--*-->
+    <authors>HHChaos</authors>
+    <owners>HHChaos</owners>
+    <!--
+    <licenseUrl></licenseUrl>
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl>
+-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--*-->
+    <description>ChartCreator can generate custom style chart image(bar,line,pie) on the UWP platform.</description>
+    <!--*-->
+    <releaseNotes>First version.</releaseNotes>
+    <copyright>HHChaos Copyright ©  2018</copyright>
+    <tags>C# UWP Chart BarChart LineChart PieChart</tags>
+    <dependencies>
+      <dependency id="Win2D.uwp" version="1.21.0" />
+      <dependency id="Newtonsoft.Json" version="10.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\ChartCreator.dll" target="lib\uap10.0" />
+    <file src="bin\Release\ChartCreator.pdb" target="lib\uap10.0" />
+    <file src="bin\Release\ChartCreator.pri" target="lib\uap10.0" />
+  </files>
+</package>
