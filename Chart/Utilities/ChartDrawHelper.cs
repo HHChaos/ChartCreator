@@ -17,7 +17,7 @@ namespace ChartCreator.Chart.Utilities
 {
     public static class ChartDrawHelper
     {
-        public static async Task<SoftwareBitmap> GetBitmapAsync(CanvasCommandList canvasCommandList)
+        public static CanvasBitmap GetCanvasBitmap(this CanvasCommandList canvasCommandList)
         {
             var chartRect = canvasCommandList.GetBounds(canvasCommandList.Device);
             var offScreen = new CanvasRenderTarget(canvasCommandList.Device, (float) chartRect.Width,
@@ -28,6 +28,11 @@ namespace ChartCreator.Chart.Utilities
                 session.Transform = Matrix3x2.CreateTranslation(chartOffset);
                 session.DrawImage(canvasCommandList);
             }
+            return offScreen;
+        }
+        public static async Task<SoftwareBitmap> GetSoftwareBitmapAsync(this CanvasCommandList canvasCommandList)
+        {
+            var offScreen = canvasCommandList.GetCanvasBitmap();
             var bitmap = await SoftwareBitmap.CreateCopyFromSurfaceAsync(offScreen, BitmapAlphaMode.Premultiplied);
             offScreen.Dispose();
             return bitmap;

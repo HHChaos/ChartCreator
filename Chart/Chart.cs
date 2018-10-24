@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Graphics.Imaging;
 using ChartCreator.Chart.Style;
+using Microsoft.Graphics.Canvas;
 
 namespace ChartCreator.Chart
 {
@@ -19,6 +20,6 @@ namespace ChartCreator.Chart
         public ChartType ChartType { get; }
         public ChartValues Values { get; set; }
         public ChartStyle Style { get; set; }
-        public abstract Task<SoftwareBitmap> GetChartBitmapAsync();
+        public abstract CanvasCommandList GetChartImage();
     }
 }

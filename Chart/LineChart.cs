@@ -80,7 +80,7 @@ namespace ChartCreator.Chart
             return CanvasGeometry.CreateCircle(resourceCreator, point, dotWidth / 2);
         }
 
-        public override async Task<SoftwareBitmap> GetChartBitmapAsync()
+        public override CanvasCommandList GetChartImage()
         {
             if (Values == null || Values.GroupCount == 0 ||
                 Style?.ChartType != ChartType.Line)
@@ -205,9 +205,7 @@ namespace ChartCreator.Chart
                     }
                     legend.Dispose();
                 }
-                var bitmap = await ChartDrawHelper.GetBitmapAsync(commandList);
-                commandList.Dispose();
-                return bitmap;
+                return commandList;
             }
         }
     }
