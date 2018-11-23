@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="ChartCreator.Sample.Views.ChartEditorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ChartCreator.Sample.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="using:ChartCreator.Sample.Controls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding ChartEditorViewModel, Source={StaticResource Locator}}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="PickerCloseButtonStyle"
+                BasedOn="{StaticResource NavigationBackButtonNormalStyle}"
+                TargetType="Button">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Content" Value="&#xE10A;" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Foreground" Value="#474261" />
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid
+            Background="White"
+            BorderBrush="#d9ddea"
+            BorderThickness="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Height="40" Background="#d9ddea">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Margin="15,0"
+                    VerticalAlignment="Center"
+                    FontSize="14px"
+                    Foreground="#474261"
+                    Text="Chart Editor" />
+                <Button
+                    Grid.Column="1"
+                    Command="{Binding ExitCommand}"
+                    Style="{StaticResource PickerCloseButtonStyle}" />
+            </Grid>
+            <Grid Grid.Row="1" Padding="20">
+                <StackPanel VerticalAlignment="Top">
+                    <TextBox
+                        Margin="0,0,0,5"
+                        Padding="8"
+                        Background="#F7F6FC"
+                        BorderBrush="#F7F6FC"
+                        BorderThickness="1"
+                        Header="Chart Title"
+                        Text="{Binding Title, Mode=TwoWay}" />
+                    <my:ChartDataGrid Height="300" Values="{Binding Values, Mode=TwoWay}" />
+                    <StackPanel Margin="0,10" Orientation="Horizontal">
+                        <TextBlock
+                            Width="150"
+                            VerticalAlignment="Center"
+                            Text="ChartType" />
+                        <ComboBox
+                            Width="200"
+                            DisplayMemberPath="Key"
+                            ItemsSource="{Binding ChartTypeList}"
+                            SelectedItem="{Binding SelectedChartType, Mode=TwoWay}" />
+                    </StackPanel>
+                    <StackPanel Margin="0,10" Orientation="Horizontal">
+                        <TextBlock
+                            Width="150"
+                            VerticalAlignment="Center"
+                            Text="LegendPosition" />
+                        <ComboBox
+                            Width="200"
+                            DisplayMemberPath="Key"
+                            ItemsSource="{Binding LegendPositionList}"
+                            SelectedItem="{Binding SelectedLegendPosition, Mode=TwoWay}" />
+                    </StackPanel>
+                    <StackPanel
+                        Width="500"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Text="Text" />
+                        <CheckBox
+                            Margin="20,0,0,0"
+                            Content="Title"
+                            IsChecked="{Binding IsShowTitle, Mode=TwoWay}" />
+                        <CheckBox Content="Group" IsChecked="{Binding IsShowGroupLabels, Mode=TwoWay}" />
+                        <CheckBox Content="Legend" IsChecked="{Binding IsShowLegend, Mode=TwoWay}" />
+                        <CheckBox Content="Data" IsChecked="{Binding IsShowDataValues, Mode=TwoWay}" />
+                    </StackPanel>
+                    <Button
+                        HorizontalAlignment="Center"
+                        Command="{Binding SubmitCommand}"
+                        Content="Submit" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

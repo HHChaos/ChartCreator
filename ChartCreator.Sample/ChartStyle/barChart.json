@@ -1,0 +1,99 @@
+{
+  "axisStyle": {
+    "valueMarkerFormat": {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 14.0,
+      "foreground": "#424f61",
+      "isBold": false,
+      "thickness": {
+        "left": 0.0,
+        "top": 0.0,
+        "right": 14.0,
+        "bottom": 0.0
+      }
+    },
+    "valueMarkerLineLength": 2.0,
+    "lineWidth": 2.0,
+    "lineColor": "#424f61",
+    "dataAreaHeight": 288.0,
+    "topSpace": 22.0,
+    "rightSpace": 22.0,
+    "startOffset": 22.0,
+    "arrowWidth": 10.0,
+    "arrowHeight": 8.0
+  },
+  "groupLabelFormat": {
+    "fontFamily": "Microsoft YaHei",
+    "fontSize": 14.0,
+    "foreground": "#424f61",
+    "isBold": false,
+    "thickness": {
+      "left": 0.0,
+      "top": 12.0,
+      "right": 0.0,
+      "bottom": 0.0
+    }
+  },
+  "barBorderWidth": 0.0,
+  "barBorderColor": "#ffffff",
+  "barMaxWidth": 86.0,
+  "barMinWidth": 20.0,
+  "barMaxNumber": 4,
+  "groupSpace": 30.0,
+  "barSpace": 2.0,
+  "chartType": 0,
+  "titleFormat": {
+    "fontFamily": "Microsoft YaHei",
+    "fontSize": 18.0,
+    "foreground": "#424f61",
+    "isBold": false,
+    "thickness": {
+      "left": 0.0,
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 30.0
+    }
+  },
+  "dataLabelFormat": {
+    "fontFamily": "Microsoft YaHei",
+    "fontSize": 10.0,
+    "foreground": "#424f61",
+    "isBold": false,
+    "thickness": {
+      "left": 0.0,
+      "top": 4.0,
+      "right": 0.0,
+      "bottom": 0.0
+    }
+  },
+  "legendStyle": {
+    "colorBlockWidth": 8.0,
+    "colorBlockHeight": 8.0,
+    "labelFormat": {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 14.0,
+      "foreground": "#424f61",
+      "isBold": false,
+      "thickness": {
+        "left": 4.0,
+        "top": 0.0,
+        "right": 20.0,
+        "bottom": 20.0
+      }
+    },
+    "thickness": {
+      "left": 14.0,
+      "top": 46.0,
+      "right": 0.0,
+      "bottom": 0.0
+    }
+  },
+  "colorSpace": [
+    "#dee1e3",
+    "#33ab9a",
+    "#3ed2e7",
+    "#b0b4ba",
+    "#48d7ca",
+    "#2399c4"
+  ]
+}

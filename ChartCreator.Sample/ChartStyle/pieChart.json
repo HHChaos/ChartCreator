@@ -1,0 +1,60 @@
+{
+  "radius": 144.0,
+  "borderWidth": 2.0,
+  "borderColor": "#ffffff",
+  "chartType": 1,
+  "titleFormat": {
+    "fontFamily": "Microsoft YaHei",
+    "fontSize": 18.0,
+    "foreground": "#424f61",
+    "isBold": false,
+    "thickness": {
+      "left": 0.0,
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 30.0
+    }
+  },
+  "dataLabelFormat": {
+    "fontFamily": "Microsoft YaHei",
+    "fontSize": 10.0,
+    "foreground": "#424f61",
+    "isBold": false,
+    "thickness": {
+      "left": 0.0,
+      "top": 48.0,
+      "right": 0.0,
+      "bottom": 0.0
+    }
+  },
+  "legendStyle": {
+    "colorBlockWidth": 8.0,
+    "colorBlockHeight": 8.0,
+    "labelFormat": {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 14.0,
+      "foreground": "#424f61",
+      "isBold": false,
+      "thickness": {
+        "left": 4.0,
+        "top": 0.0,
+        "right": 20.0,
+        "bottom": 20.0
+      }
+    },
+    "thickness": {
+      "left": 20.0,
+      "top": 22.0,
+      "right": 0.0,
+      "bottom": 0.0
+    }
+  },
+  "colorSpace": [
+    "#dee1e3",
+    "#33ab9a",
+    "#3ed2e7",
+    "#b0b4ba",
+    "#48d7ca",
+    "#2399c4"
+  ]
+}
