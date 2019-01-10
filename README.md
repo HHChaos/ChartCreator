@@ -5,7 +5,7 @@ ChartCreator 是一套UWP图表工具，可以生成自定义的图表（柱状�
 
 ## Download
 UWP:download from [Nuget](https://www.nuget.org/packages/ChartCreator/)
-### use ChartCreator ###
+### Using ChartCreator ###
     var chart = new LineChart
                     {
                         Values = values,
@@ -13,7 +13,7 @@ UWP:download from [Nuget](https://www.nuget.org/packages/ChartCreator/)
                     };
     var canvasCommandList = chart.GetChartImage();
     var bitmap=await canvasCommandList.GetSoftwareBitmapAsync();
-### sample App ###
+### Sample App ###
 
 [This is a sample app](https://github.com/HHChaos/ChartCreator/tree/master/ChartCreator.Sample)
 
